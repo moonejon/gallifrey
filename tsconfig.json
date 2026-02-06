@@ -1,0 +1,106 @@
+{
+  "extends": "expo/tsconfig.base",
+  "compilerOptions": {
+    // Strict Type-Checking Options (All enabled for maximum safety)
+    "strict": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "strictBindCallApply": true,
+    "strictPropertyInitialization": true,
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "alwaysStrict": true,
+
+    // Additional Strict Checks
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedIndexedAccess": true,
+    "noImplicitOverride": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "allowUnusedLabels": false,
+    "allowUnreachableCode": false,
+
+    // Module Resolution
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "isolatedModules": true,
+
+    // Target & Library
+    "target": "esnext",
+    "lib": ["esnext"],
+    "jsx": "react-native",
+
+    // Path Aliases
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"],
+      "@/components": ["src/components"],
+      "@/components/*": ["src/components/*"],
+      "@/screens": ["src/screens"],
+      "@/screens/*": ["src/screens/*"],
+      "@/navigation": ["src/navigation"],
+      "@/navigation/*": ["src/navigation/*"],
+      "@/types": ["src/types"],
+      "@/types/*": ["src/types/*"],
+      "@/services": ["src/services"],
+      "@/services/*": ["src/services/*"],
+      "@/stores": ["src/stores"],
+      "@/stores/*": ["src/stores/*"],
+      "@/hooks": ["src/hooks"],
+      "@/hooks/*": ["src/hooks/*"],
+      "@/utils": ["src/utils"],
+      "@/utils/*": ["src/utils/*"],
+      "@/constants": ["src/constants"],
+      "@/constants/*": ["src/constants/*"],
+      "@/theme": ["src/theme"],
+      "@/theme/*": ["src/theme/*"],
+      "@/assets": ["assets"],
+      "@/assets/*": ["assets/*"]
+    },
+
+    // Code Quality
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "exactOptionalPropertyTypes": true,
+
+    // Type Emission
+    "declaration": false,
+    "declarationMap": false,
+    "sourceMap": true,
+    "removeComments": false,
+    "incremental": true,
+
+    // Interop Constraints
+    "allowJs": false,
+    "checkJs": false,
+    "emitDeclarationOnly": false
+  },
+  "include": [
+    "src/**/*",
+    "App.tsx",
+    "app.config.ts",
+    "metro.config.js",
+    "**/*.ts",
+    "**/*.tsx"
+  ],
+  "exclude": [
+    "node_modules",
+    "babel.config.js",
+    "metro.config.js",
+    "jest.config.js",
+    "**/*.spec.ts",
+    "**/*.test.ts",
+    "**/*.spec.tsx",
+    "**/*.test.tsx",
+    ".expo",
+    "dist",
+    "build",
+    "ios/build",
+    "android/build"
+  ]
+}

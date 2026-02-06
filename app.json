@@ -1,0 +1,138 @@
+{
+  "expo": {
+    "name": "Gallifrey",
+    "slug": "gallifrey",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "automatic",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#6750A4"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.gallifrey.app",
+      "buildNumber": "1",
+      "jsEngine": "hermes",
+      "infoPlist": {
+        "NSCameraUsageDescription": "Gallifrey needs access to your camera to let you capture photos and videos for your posts",
+        "NSPhotoLibraryUsageDescription": "Gallifrey needs access to your photo library to let you share photos and videos in posts",
+        "NSPhotoLibraryAddUsageDescription": "Gallifrey needs permission to save media to your photo library",
+        "NSMicrophoneUsageDescription": "Gallifrey needs access to your microphone to record videos with sound",
+        "PHPhotoLibraryPreventAutomaticLimitedAccessAlert": true,
+        "UIBackgroundModes": [],
+        "UIRequiresFullScreen": false,
+        "UIStatusBarStyle": "UIStatusBarStyleDefault",
+        "UIViewControllerBasedStatusBarAppearance": true
+      },
+      "privacyManifests": {
+        "NSPrivacyAccessedAPITypes": [
+          {
+            "NSPrivacyAccessedAPIType": "NSPrivacyAccessedAPICategoryUserDefaults",
+            "NSPrivacyAccessedAPITypeReasons": [
+              "CA92.1"
+            ]
+          },
+          {
+            "NSPrivacyAccessedAPIType": "NSPrivacyAccessedAPICategoryFileTimestamp",
+            "NSPrivacyAccessedAPITypeReasons": [
+              "C617.1"
+            ]
+          },
+          {
+            "NSPrivacyAccessedAPIType": "NSPrivacyAccessedAPICategorySystemBootTime",
+            "NSPrivacyAccessedAPITypeReasons": [
+              "35F9.1"
+            ]
+          },
+          {
+            "NSPrivacyAccessedAPIType": "NSPrivacyAccessedAPICategoryDiskSpace",
+            "NSPrivacyAccessedAPITypeReasons": [
+              "E174.1"
+            ]
+          }
+        ],
+        "NSPrivacyTracking": false,
+        "NSPrivacyTrackingDomains": [],
+        "NSPrivacyCollectedDataTypes": [
+          {
+            "NSPrivacyCollectedDataType": "NSPrivacyCollectedDataTypeEmailAddress",
+            "NSPrivacyCollectedDataTypeLinked": false,
+            "NSPrivacyCollectedDataTypeTracking": false,
+            "NSPrivacyCollectedDataTypePurposes": [
+              "NSPrivacyCollectedDataTypePurposeAppFunctionality"
+            ]
+          },
+          {
+            "NSPrivacyCollectedDataType": "NSPrivacyCollectedDataTypePhotos",
+            "NSPrivacyCollectedDataTypeLinked": true,
+            "NSPrivacyCollectedDataTypeTracking": false,
+            "NSPrivacyCollectedDataTypePurposes": [
+              "NSPrivacyCollectedDataTypePurposeAppFunctionality"
+            ]
+          },
+          {
+            "NSPrivacyCollectedDataType": "NSPrivacyCollectedDataTypeOtherUserContent",
+            "NSPrivacyCollectedDataTypeLinked": true,
+            "NSPrivacyCollectedDataTypeTracking": false,
+            "NSPrivacyCollectedDataTypePurposes": [
+              "NSPrivacyCollectedDataTypePurposeAppFunctionality"
+            ]
+          }
+        ]
+      },
+      "associatedDomains": [],
+      "usesAppleSignIn": false
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#6750A4"
+      },
+      "package": "com.gallifrey.app",
+      "permissions": [
+        "android.permission.CAMERA",
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.WRITE_EXTERNAL_STORAGE",
+        "android.permission.RECORD_AUDIO"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Gallifrey needs access to your photos to let you share them in posts",
+          "cameraPermission": "Gallifrey needs access to your camera to let you take photos and videos for posts",
+          "microphonePermission": "Gallifrey needs access to your microphone to record videos with sound"
+        }
+      ],
+      [
+        "expo-av",
+        {
+          "microphonePermission": "Gallifrey needs access to your microphone to record videos with sound"
+        }
+      ],
+      "expo-router"
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "your-project-id-here"
+      }
+    },
+    "owner": "your-expo-username",
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/your-project-id-here"
+    }
+  }
+}
